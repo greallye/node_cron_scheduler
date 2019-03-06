@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <% include ../partials/header.ejs %>
+    <style>
+        .logo-top{
+            margin: auto;
+            width: 15%;
+            padding: 10px;
+        }
+        .example { margin: 10px; border: 1px dashed #ccc; padding: 10px;}
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#cronJob').cron({
+                initial: "30 2 * * *",
+                onChange: function() {
+                    document.getElementById("cron_time").value = $(this).cron("value");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="form-style-5">
+        <form action = "/create_new_jobs", method="post">
+        <fieldset>
+            <legend><span class="number">1</span> Job Info</legend>
+            <label for="job_name" id="nameValidation"></label>
+            <input type="text" id="job_name" name="job_name" placeholder="Job Name *" required>
+            
+            <label for="cronSelector">What time would you like</label>
+            <div class='example' id="cronSelector">
+                <div id='cronJob' class="create_form_select"></div>
+                <input type="text" id='cron_time' name="cron_time">
+            </div>
+        </fieldset>
+        <input id="submitButton" type="submit" value="Create" />
+        </form>
+    </div>
+</body>
+</html>

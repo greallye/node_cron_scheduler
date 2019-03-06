@@ -1,0 +1,22 @@
+{
+  "name": "scheduler_tool",
+  "version": "0.1.0",
+  "description": "create cron jobs and load them when node starts and add more to them",
+  "main": "scheduler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Evan greally",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "helmet": "^3.15.1",
+    "node-schedule": "^1.3.2",
+    "path": "^0.12.7",
+    "sequelize": "^4.43.0",
+    "sqlite3": "^4.0.6"
+  }
+}
