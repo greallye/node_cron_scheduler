@@ -4,7 +4,7 @@
   "description": "create cron jobs and load them when node starts and add more to them",
   "main": "scheduler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "forever start scheduler.js"
   },
   "author": "Evan greally",
   "license": "MIT",
